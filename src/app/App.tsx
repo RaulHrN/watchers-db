@@ -1,13 +1,14 @@
-import React from 'react';
-import { HomePage } from './pages/home/home.page';
+import React from "react";
+import { HomePage } from "./pages/home/home.page";
+import { TmdbProvider } from "../provider/TmdbContext";
 
 function App() {
   return (
-    <div className="App">
-      Aplicação sendo desenvolvida por Raul Nascimento
-
-      <HomePage  />
-    </div>
+    <TmdbProvider>
+      <div className="App">
+        <HomePage />
+      </div>
+    </TmdbProvider>
   );
 }
 
