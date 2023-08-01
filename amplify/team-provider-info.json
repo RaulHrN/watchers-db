@@ -10,6 +10,11 @@
       "StackName": "amplify-watchersdb-dev-82953",
       "StackId": "arn:aws:cloudformation:us-east-1:443554432724:stack/amplify-watchersdb-dev-82953/95f02f30-2627-11ee-96ad-0a612fd4f845",
       "AmplifyAppId": "d275xfo3zh8y3x"
+    },
+    "categories": {
+      "auth": {
+        "watchersdbe3923ac7": {}
+      }
     }
   }
 }
