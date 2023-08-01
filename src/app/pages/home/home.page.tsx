@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useTmdb } from "../../../provider/TmdbContext";
-import { MovieTmdb } from "../../shared/models/tmdb";
+import { ImageCarousel } from "../../shared/components/image-carousel/image-carousel.component";
 
-export const HomePage = () => {
+export function HomePage() {
   const { popularMovies, searchPopularMovies } = useTmdb();
 
   useEffect(() => {
@@ -13,17 +13,7 @@ export const HomePage = () => {
     <>
       {!!popularMovies && (
         <div>
-          Listagem
-          {popularMovies.map((movie: MovieTmdb) => (
-            <div key={movie.id}>
-              <h2>{movie.title}</h2>
-              <img
-                src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-                alt={movie.title}
-              />
-              <p>{movie.overview}</p>
-            </div>
-          ))}
+          <ImageCarousel items={popularMovies}/>
         </div>
       )}
     </>
